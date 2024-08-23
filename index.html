@@ -1,0 +1,115 @@
+<!-- started building 1st-jun-2024 and finish 7th-jul-2024 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-Z</title>
+    <link href="img/icon logo.png" rel="icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="fontawesome/css/all.css" type="text/css" rel="stylesheet" />
+    <link href="css/index.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <header id="header">
+        <section id="logo-wraper">
+            <img src="img/logo.png" alt="logo" id="logo" />
+        </section>
+    </header>
+    
+    <main id="wraper">
+       
+        <section id="input">
+            <h1><span class="blue-txt">Analyze</span> Text</h1>
+            <p id="desc">
+                Paste or enter a text document to get the meaning of words, 
+                and amount of it's characters, word and paragraph.
+            </p>
+
+            <section id="inputer">
+                <section id="paste-wraper">
+                    <p>"Paste or tap to enter text"</p>
+                    <div id="paste"><i class="fa-regular fa-clipboard paste-icon"></i> paste</div>
+                </section>
+
+                <form id="input-form" action="#">
+                    <textarea id="textarea-field"></textarea> 
+                    <p id="note">
+                        <strong>Note:</strong> 
+                        You must enter more than one (1) word in the textarea-field to get accurate result.
+                    </p>
+                    <input id="submit" class="able" type="submit" value="Analize text" />
+                </form> 
+
+                <section id="perm-paste" class="inactive">
+                    <div  class="popup">
+                        <i id="popup-icon" class="fa-regular fa-clipboard "></i>
+                        <span id="popup-text" class="popup-text">paste</span> 
+                    </div>
+                </section>
+
+                
+            </section>
+            
+        </section>
+
+        <section id="output">
+            <section id="analysis-wraper">
+                <h1>Text analysis</h1>
+                <section id="analysis">
+                    <article class="a-item">
+                        <i class="a-icons fa-solid fa-newspaper"></i> Characters:<br>
+                        <span id="characters-val" class="a-values">0.00</span>
+                    </article>
+                    <article class="a-item">
+                        <i class="a-icons fa-regular fa-newspaper"></i> Characters with white space:<br>
+                        <span id="chrts-with-space-val" class="a-values">0.00</span>
+                    </article>
+                    <article class="a-item">
+                        <i class="a-icons fa-solid fa-file-word"></i> Words:<br>
+                        <span id="words-val" class="a-values">0.00</span>
+                    </article>
+                    <article class="a-item">
+                        <i class="a-icons fa-solid fa-paragraph"></i> Paragraphs:<br>
+                        <span id="paragraphs-val" class="a-values">0.00</span>
+                    </article>
+                </section>
+            </section>
+
+            <section id="tab">
+                <section id="tab-controls">
+                   <section class="tab-cntl-wrp">
+                    <a href="#" class="tab-control active" data-tab-cnt="content">Content</a>
+                </section>
+                   <section class="tab-cntl-wrp">
+                    <a href="#" class="tab-control" data-tab-cnt="typo-erro">Typo error <span id="typo-length">0</span></a>
+                </section>
+                </section>
+                <section id="tab-contents">
+                    <div id="content" class="tab-content active">
+                        <p id="content-val"></p>
+                    </div>
+                    <div id="typo-erro" class="tab-content">
+                        <p id="t-e-note">
+                            <b>Note:</b> these words listed below were eather contain typing error or were not English words.
+                        </p>
+                        <div id="typo-errors-val"></div>
+                    </div>
+                </section>
+            </section>
+
+        </section>
+    </main>
+
+    <footer id="footer">
+        <section id="f-logo-wraper">
+            <p>Build by</p>
+            <img src="img/logo 2.png" alt="logo" />
+        </section>
+        <div class="copyright">&copy; copyright 2024 - 2025</div>
+    </footer>
+    <script src="dist/bundle.js"></script>
+</body>
+</html>
